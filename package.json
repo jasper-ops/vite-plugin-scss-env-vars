@@ -1,13 +1,44 @@
 {
-  "name": "scss-env-vars",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vite-plugin-scss-env-vars",
+  "version": "0.0.1",
+  "description": "Provide env of Vite variables in scss files",
+  "authors": "Jasper <wx2080969361@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/jasper-ops/vite-plugin-scss-env-vars",
   "scripts": {
     "build": "tsup src/*.ts --format cjs,esm --dts --splitting --clean"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vite",
+    "plugin",
+    "scss",
+    "env",
+    "variables"
+  ],
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
   "devDependencies": {
     "tsup": "^8.2.1",
     "typescript": "^5.5.3",
