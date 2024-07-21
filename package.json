@@ -1,0 +1,19 @@
+{
+  "name": "scss-env-vars",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsup src/*.ts --format cjs,esm --dts --splitting --clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^8.2.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  },
+  "dependencies": {
+    "magic-string": "^0.30.10"
+  }
+}
