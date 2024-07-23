@@ -37,16 +37,16 @@ function ScssEnvVars(options: ScssEnvVarsOptions = {}): PluginOption {
         },
         transform(code, id) {
             if (!scssEnvVars) {
-                return code;
+                return;
             }
 
             if (typeof idFilter === 'function') {
                 if (!idFilter(id)) {
-                    return code;
+                    return;
                 }
             } else if (idFilter instanceof RegExp) {
                 if (!idFilter.test(id)) {
-                    return code;
+                    return;
                 }
             }
 
