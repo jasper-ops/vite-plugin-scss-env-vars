@@ -1,12 +1,13 @@
 {
   "name": "vite-plugin-scss-env-vars",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Provide env of Vite variables in scss files",
   "authors": "Jasper <wx2080969361@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/jasper-ops/vite-plugin-scss-env-vars",
   "scripts": {
-    "build": "tsup src/*.ts --format cjs,esm --dts --splitting --clean"
+    "build": "tsup src/*.ts --format cjs,esm --dts --splitting --clean",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "vite",
